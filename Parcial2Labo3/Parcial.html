@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuVehiculo</title>
+    <link rel="stylesheet" href="./hojaEstilos.css" >  
+    <script src="./Vehiculo.js"></script>
+    <script src="./Auto.js"></script>
+    <script src="./Camioneta.js"></script>
+    <script src="./funcionesHTML.js"></script>
+</head>
+<body>
+    <div class = "bAgregar">
+        <input type ="button" value = "Alta" id="bAlta" >
+    </div>
+    <div id="container" hidden >
+        <div id="contenedorModificar" class="container">
+            <div class ="divCerrar">
+                <div class ="bCerrar">
+                   <button class ="cerrar" id="bCerrar"> X</button>
+                </div>
+            </div>             
+            <label>Id: </label>
+            <input type ="number" size="35" id="id" disabled> <br>
+            <label>Marca: </label>
+            <input type ="text" size="35" id="Marca"> <br>
+            <label>Modelo: </label>
+            <input type ="text" size="35" id="Modelo"> <br>
+            <label>Precio: </label>
+            <input type ="number" size="35" id="Precio"> <br>
+            <label>Tipo </label>
+            <select name="tipoVehiculo" id="Vehiculo" >
+                <option value="Camioneta">Camioneta</option>
+                <option value="Auto">Auto</option>                
+            </select>
+            <div id="contenedorAuto" hidden > 
+                <label>Cantidad de Ruedas</label>
+                <input type ="text" size="35" id="cantRuedas"> <br>
+            </div>
+            <div id="contenedorCamioneta" hidden> 
+                <label>Es CuatroXCuatro</label>
+                    <input type="checkbox" id="verdadero" class="sinError" name="cuatro">
+                    <label for="verdadero">Si</label>
+            </div>
+            <input type="button" value="Promedio" id="btnPromedio">
+            <input type ="button" value="Guardar" id="btnGuardar">
+        </div>
+    </div>
+    <input type ="text"  id="search_input" placeholder="Filtrar tabla por Marca" >
+        <!-- <select name="tipoFilter" id="tipoFilter">
+            <option value="Camioneta">Camioneta</option>
+            <option value="Auto">Auto</option> 
+        </select> -->
+    <h2></h2>
+    <Table>
+        <thead>
+            <th >Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>precio</th>
+            <th>Accion</th>
+        </thead>
+        <tbody id="tCuerpo"></tbody>
+    </Table>
+
+</body>
+</html>
